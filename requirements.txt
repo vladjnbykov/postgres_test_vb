@@ -1,6 +1,6 @@
 streamlit==1.0.0
 SQLAlchemy==1.4.27
-~umpy==1.18.1
+
 pandas==1.3.5
 psycopg2_binary==2.8.6
 numpy==1.22.2
