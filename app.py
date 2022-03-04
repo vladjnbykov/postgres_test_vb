@@ -24,12 +24,15 @@ def main():
     con = psycopg2.connect(DATABASE_URL)
     cur = con.cursor
 
-    query = f"""SELECT * FROM data_percent"""
-    data = pd.read_sql(query, con)
+    query_per = f"""SELECT * FROM data_percent"""
+    data_per = pd.read_sql(query_per, con)
+    st.success('First table')
+    st.write(data_per)
 
-    
-    
-    st.write(data)
+    query_mfi = f"""SELECT * FROM data_mfi"""
+    data_mfi = pd.read_sql(query_mfi, con)
+    st.success('Second table')
+    st.write(data_mfi)
 
     
     if con is not None:
